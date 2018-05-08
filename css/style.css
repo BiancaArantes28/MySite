@@ -35,4 +35,28 @@
       #home .homeContent .bannerHome h1 {
         text-transform: uppercase; }
 
+#sobre {
+  background-color: #00bdbd;
+  color: #fff;
+  width: 100%; }
+  #sobre .container {
+    padding-top: 85px;
+    padding-bottom: 93px; }
+    #sobre .container .heading {
+      text-align: center;
+      padding-bottom: 45px; }
+    #sobre .container .occupationArea {
+      font-weight: 600;
+      font-size: 18px;
+      padding-bottom: 22px; }
+    #sobre .container p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 14px;
+      line-height: 21px;
+      font-weight: 400;
+      padding-bottom: 22px;
+      margin: 0px; }
+    #sobre .container .topimg {
+      margin-top: 20px; }
+
 /*# sourceMappingURL=style.css.map */

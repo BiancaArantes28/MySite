@@ -1,5 +1,5 @@
 $color_h1: #fff;
-
+$color_about: #00bdbd;
 .navbar{
     padding: 0px;
 
@@ -41,4 +41,34 @@ $color_h1: #fff;
             }
         }
     }
+}
+#sobre{
+    background-color: $color_about;
+    color: $color_h1;
+    width: 100%;
+    .container{
+        padding-top: 85px;
+        padding-bottom: 93px;
+        .heading{
+            text-align: center;
+            padding-bottom: 45px;
+        }
+        .occupationArea{
+            font-weight: 600;
+            font-size: 18px;
+            padding-bottom: 22px;
+        }
+        p{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 400;
+            padding-bottom: 22px;
+            margin: 0px;
+        }
+        .topimg{
+            margin-top: 20px;
+        }
+    }
+    
 }
