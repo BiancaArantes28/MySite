@@ -1,0 +1,15 @@
+.navbar {
+  padding: 0px; }
+
+.navbar-nav {
+  margin: auto;
+  margin-right: 0; }
+
+.nav-link {
+  padding: 22px 25px 22px 25px !important;
+  margin: auto; }
+
+.border-red {
+  border-bottom: 5px solid red; }
+
+/*# sourceMappingURL=style.css.map */
