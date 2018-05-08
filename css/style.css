@@ -15,6 +15,10 @@
 .border-red {
   border-bottom: 5px solid #ff675f; }
 
+.heading {
+  text-align: center;
+  padding-bottom: 45px; }
+
 #home {
   height: 902px;
   background-image: url("css3-code.jpg");
@@ -45,9 +49,6 @@
   #sobre .container {
     padding-top: 85px;
     padding-bottom: 93px; }
-    #sobre .container .heading {
-      text-align: center;
-      padding-bottom: 45px; }
     #sobre .container .occupationArea {
       font-weight: 600;
       font-size: 18px;
@@ -61,5 +62,11 @@
       margin: 0px; }
     #sobre .container .topimg {
       margin-top: 20px; }
+
+#experiencia .container {
+  padding-top: 85px;
+  padding-bottom: 93px; }
+#experiencia h2 {
+  color: #ff675f; }
 
 /*# sourceMappingURL=style.css.map */

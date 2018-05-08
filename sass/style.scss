@@ -1,6 +1,13 @@
 $color_h1: #fff;
 $color_about: #00bdbd;
 $color_secundary: #ff675f;
+
+//// Mixins ////
+@mixin padding-container($padding_top, $padding_bottom){
+    padding-top: $padding_top;
+    padding-bottom: $padding_bottom;
+
+}
 .navbar{
     padding: 0px;
     position: fixed;
@@ -19,6 +26,11 @@ $color_secundary: #ff675f;
     border-bottom: 5px solid $color_secundary;
 }
 
+//// General ////
+.heading{
+    text-align: center;
+    padding-bottom: 45px;
+}
 #home{
     height: 902px;
     background-image: url("css3-code.jpg");
@@ -50,12 +62,7 @@ $color_secundary: #ff675f;
     color: $color_h1;
     width: 100%;
     .container{
-        padding-top: 85px;
-        padding-bottom: 93px;
-        .heading{
-            text-align: center;
-            padding-bottom: 45px;
-        }
+        @include padding-container(85px, 93px);
         .occupationArea{
             font-weight: 600;
             font-size: 18px;
@@ -74,4 +81,13 @@ $color_secundary: #ff675f;
         }
     }
     
+}
+
+#experiencia{
+    .container{
+        @include padding-container(85px, 93px);
+    }
+    h2{
+        color:$color_secundary;
+    }
 }
