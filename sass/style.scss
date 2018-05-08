@@ -1,5 +1,6 @@
 $color_h1: #fff;
 $color_about: #00bdbd;
+$color_secundary: #ff675f;
 .navbar{
     padding: 0px;
     position: fixed;
@@ -15,7 +16,7 @@ $color_about: #00bdbd;
     margin: auto;
 }
 .border-red{
-    border-bottom: 5px solid red;
+    border-bottom: 5px solid $color_secundary;
 }
 
 #home{
@@ -36,7 +37,7 @@ $color_about: #00bdbd;
             text-align:center;
             padding:30px 0 30px ;
             max-width:960px;
-            border:1px solid #fff;
+            border:1px solid $color_h1;
             color: $color_h1;
             h1{
                 text-transform:uppercase;
