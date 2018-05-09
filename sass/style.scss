@@ -1,6 +1,14 @@
 $color_h1: #fff;
 $color_about: #00bdbd;
 $color_secundary: #ff675f;
+$color_workyear: #ff675f;
+$color_rightarea: #eaeaea;
+$color_background_excon: #f3f3f3;
+$color_border_excon: #eeeeee;
+$color_excon_font: #474d5d;
+$color_excon_p: #84868d;
+$color_experiencia_p: #84868d;
+
 
 //// Mixins ////
 @mixin padding-container($padding_top, $padding_bottom){
@@ -30,6 +38,14 @@ $color_secundary: #ff675f;
 .heading{
     text-align: center;
     padding-bottom: 45px;
+}
+h5{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    padding-bottom: 6px;
+    font-weight: 400;
+    margin: 0px;
 }
 #home{
     height: 902px;
@@ -90,4 +106,59 @@ $color_secundary: #ff675f;
     h2{
         color:$color_secundary;
     }
+    h4{
+        font-weight: 700;
+    }
+    p{
+        color: $color_experiencia_p;
+        font-size: 13px;
+        line-height: 18px;
+    }
+    .workDetails{
+        .workYear{
+            color: $color_h1;
+            background: $color_workyear;
+            text-align: center;
+            width: 120px;
+            height: 120px;
+            padding: 40px 0 40px 0;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            @media screen and (min-width: 1200px){
+                width: 140px;
+                height: 140px;
+                padding-top: 50px;
+            }
+        }
+        .rightArea{
+            border-left: solid 1px $color_rightarea;
+            padding-bottom: 47px;
+        }
+        .arrowpart{
+            float: left;
+            width: 15px;
+            height: 50px;
+            background: url(../img/arrow-left.png) no-repeat 0 23px;
+        }
+        .exCon{
+            width: auto;
+            background: $color_background_excon;
+            border-bottom: solid 4px $color_border_excon;
+            padding: 22px 47px 6px 47px;
+            margin-left: 15px;
+            text-align: left;
+            h4{
+                color: $color_excon_font;
+                padding-bottom: 3px;
+            }
+            h5{
+                color: $color_excon_font;
+            }
+            p{
+                color: $color_excon_p;
+                line-height: 21px;
+            }
+        }
+    }
+    
 }

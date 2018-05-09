@@ -19,6 +19,14 @@
   text-align: center;
   padding-bottom: 45px; }
 
+h5 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 6px;
+  font-weight: 400;
+  margin: 0px; }
+
 #home {
   height: 902px;
   background-image: url("css3-code.jpg");
@@ -68,5 +76,48 @@
   padding-bottom: 93px; }
 #experiencia h2 {
   color: #ff675f; }
+#experiencia h4 {
+  font-weight: 700; }
+#experiencia p {
+  color: #84868d;
+  font-size: 13px;
+  line-height: 18px; }
+#experiencia .workDetails .workYear {
+  color: #fff;
+  background: #ff675f;
+  text-align: center;
+  width: 120px;
+  height: 120px;
+  padding: 40px 0 40px 0;
+  -webkit-border-radius: 50%;
+  border-radius: 50%; }
+  @media screen and (min-width: 1200px) {
+    #experiencia .workDetails .workYear {
+      width: 140px;
+      height: 140px;
+      padding-top: 50px; } }
+#experiencia .workDetails .rightArea {
+  border-left: solid 1px #eaeaea;
+  padding-bottom: 47px; }
+#experiencia .workDetails .arrowpart {
+  float: left;
+  width: 15px;
+  height: 50px;
+  background: url(../img/arrow-left.png) no-repeat 0 23px; }
+#experiencia .workDetails .exCon {
+  width: auto;
+  background: #f3f3f3;
+  border-bottom: solid 4px #eeeeee;
+  padding: 22px 47px 6px 47px;
+  margin-left: 15px;
+  text-align: left; }
+  #experiencia .workDetails .exCon h4 {
+    color: #474d5d;
+    padding-bottom: 3px; }
+  #experiencia .workDetails .exCon h5 {
+    color: #474d5d; }
+  #experiencia .workDetails .exCon p {
+    color: #84868d;
+    line-height: 21px; }
 
 /*# sourceMappingURL=style.css.map */
