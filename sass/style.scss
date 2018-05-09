@@ -8,6 +8,7 @@ $color_border_excon: #eeeeee;
 $color_excon_font: #474d5d;
 $color_excon_p: #84868d;
 $color_experiencia_p: #84868d;
+$color_subtitle: #474d5d;
 
 
 //// Mixins ////
@@ -15,6 +16,18 @@ $color_experiencia_p: #84868d;
     padding-top: $padding_top;
     padding-bottom: $padding_bottom;
 
+}
+@mixin build-button($backgroundcolor, $colortext){
+    background-color: transparent;
+    color: $backgroundcolor;
+    border: 1px solid $backgroundcolor;
+    &:hover{
+        background-color: $backgroundcolor;
+        color: $colortext;
+    }
+    &:clicked{
+        border: 1px solid $backgroundcolor !important;
+    }
 }
 .navbar{
     padding: 0px;
@@ -161,4 +174,44 @@ h5{
         }
     }
     
+}
+
+#conhecimento{
+    .container{
+        @include padding-container(85px, 93px);
+    }
+    .buttons{
+        margin-top:30px;
+        .skillButton{
+            @include build-button($color_secundary, $color_h1);
+        }
+        .selected{
+            background-color: darken($color_secundary, 5%);
+            color: $color_h1;
+        }
+    }
+    color: $color_secundary;
+    background: $color_border_excon;
+    .skillsArea{
+        text-align: center;
+        .imgPosition{
+            margin: 0 auto;
+        }
+    }
+    .skills{
+        border-radius: 50%;
+        border: 10px solid $color_secundary;
+        width: 100%;
+        margin-bottom: 23px;
+    }
+    figcaption{
+        color: $color_subtitle;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 19px;
+        line-height: 24px;
+        padding-bottom: 40px;
+        font-weight: 600;
+        margin: 0px;
+    }
 }

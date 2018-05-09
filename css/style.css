@@ -120,4 +120,43 @@ h5 {
     color: #84868d;
     line-height: 21px; }
 
+#conhecimento {
+  color: #ff675f;
+  background: #eeeeee; }
+  #conhecimento .container {
+    padding-top: 85px;
+    padding-bottom: 93px; }
+  #conhecimento .buttons {
+    margin-top: 30px; }
+    #conhecimento .buttons .skillButton {
+      background-color: transparent;
+      color: #ff675f;
+      border: 1px solid #ff675f; }
+      #conhecimento .buttons .skillButton:hover {
+        background-color: #ff675f;
+        color: #fff; }
+      #conhecimento .buttons .skillButton:clicked {
+        border: 1px solid #ff675f !important; }
+    #conhecimento .buttons .selected {
+      background-color: #ff4f46;
+      color: #fff; }
+  #conhecimento .skillsArea {
+    text-align: center; }
+    #conhecimento .skillsArea .imgPosition {
+      margin: 0 auto; }
+  #conhecimento .skills {
+    border-radius: 50%;
+    border: 10px solid #ff675f;
+    width: 100%;
+    margin-bottom: 23px; }
+  #conhecimento figcaption {
+    color: #474d5d;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19px;
+    line-height: 24px;
+    padding-bottom: 40px;
+    font-weight: 600;
+    margin: 0px; }
+
 /*# sourceMappingURL=style.css.map */
