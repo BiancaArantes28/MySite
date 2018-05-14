@@ -9,6 +9,7 @@ $color_excon_font: #474d5d;
 $color_excon_p: #84868d;
 $color_experiencia_p: #84868d;
 $color_subtitle: #474d5d;
+$color_portfolio: #563d7c;
 
 
 //// Mixins ////
@@ -213,5 +214,42 @@ h5{
         padding-bottom: 40px;
         font-weight: 600;
         margin: 0px;
+    }
+}
+
+#portfolio{
+    .container{
+        @include padding-container(85px, 93px);
+    }
+    background-color: $color_about;
+    color: $color_h1;
+
+    .buttons{
+        margin-top:30px;
+        .portfolioButton{
+            background-color: transparent;
+            color: $color_h1;
+            border-color: $color_h1;
+            &:hover{
+                border-color: #000000;
+                color: #000000;
+            }
+            
+        }
+        .selected{
+            background-color: darken($color_about, 20%);
+            color: $color_h1;
+            border-color: darken($color_about, 20%);
+            &:hover{
+                background-color: darken($color_about, 20%);
+                color: $color_h1;
+                border-color: darken($color_about, 20%);
+            }
+        }
+    }
+    .img-portifolio{
+        width: 100%;
+        min-height: 175.59px;
+        max-height: 175.59px;
     }
 }

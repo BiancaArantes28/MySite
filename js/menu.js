@@ -18,4 +18,20 @@ $("document").ready(function(){
 			$(".check-type").css({"display" : "block"});
 		}
 	});
+
+	$(".portfolioButton").click(function(){
+		type = $(this).data("type");
+		$(".portfolioButton").removeClass("selected");
+		$(this).addClass("selected");
+		$(".check-type-area").css({"display" : "block"});
+		if(type !== "tudo"){
+			$(".check-type-area").each(function(){
+				if($(this).data("tecnology") !== type){
+					$(this).css({"display" : "none"});
+				}
+			});
+		}else{
+			$(".check-type-area").css({"display" : "block"});
+		}
+	});
 });

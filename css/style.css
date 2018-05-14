@@ -159,4 +159,32 @@ h5 {
     font-weight: 600;
     margin: 0px; }
 
+#portfolio {
+  background-color: #00bdbd;
+  color: #fff; }
+  #portfolio .container {
+    padding-top: 85px;
+    padding-bottom: 93px; }
+  #portfolio .buttons {
+    margin-top: 30px; }
+    #portfolio .buttons .portfolioButton {
+      background-color: transparent;
+      color: #fff;
+      border-color: #fff; }
+      #portfolio .buttons .portfolioButton:hover {
+        border-color: #000000;
+        color: #000000; }
+    #portfolio .buttons .selected {
+      background-color: #005757;
+      color: #fff;
+      border-color: #005757; }
+      #portfolio .buttons .selected:hover {
+        background-color: #005757;
+        color: #fff;
+        border-color: #005757; }
+  #portfolio .img-portifolio {
+    width: 100%;
+    min-height: 175.59px;
+    max-height: 175.59px; }
+
 /*# sourceMappingURL=style.css.map */
