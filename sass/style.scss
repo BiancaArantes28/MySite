@@ -270,6 +270,7 @@ h5{
     }
     p{
         color: $color_p_contact;
+        font-family: 'Open Sans', sans-serif;
         font-size: 13px;
         line-height: 19px;
         padding-bottom: 14px;
@@ -286,6 +287,38 @@ h5{
             outline: none;
             font-style: italic;
             width: 100%;
+        }
+    }
+}
+
+footer{
+    background-color: $color_about;
+    .container{
+        @include padding-container(85px, 93px);
+    }
+    ul{
+        margin: 0 auto;
+        text-align: center;
+        list-style-type: none;
+        li{
+            display: inline-block;
+            text-align: center;
+            background: #ffffff;
+            color: #00bdbd;
+            line-height: 42px;
+            margin: 0 6px;
+            width: 42px !important;
+            height: 42px !important;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            a{
+                color: #ffffff;
+                width: 42px !important;
+                height: 42px !important;
+                i{
+                    line-height: 42px !important;
+                }
+            }
         }
     }
 }

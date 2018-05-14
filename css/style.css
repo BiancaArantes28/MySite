@@ -199,6 +199,7 @@ h5 {
     padding-bottom: 15px; }
   #contato p {
     color: #93959c;
+    font-family: 'Open Sans', sans-serif;
     font-size: 13px;
     line-height: 19px;
     padding-bottom: 14px;
@@ -213,5 +214,32 @@ h5 {
     outline: none;
     font-style: italic;
     width: 100%; }
+
+footer {
+  background-color: #00bdbd; }
+  footer .container {
+    padding-top: 85px;
+    padding-bottom: 93px; }
+  footer ul {
+    margin: 0 auto;
+    text-align: center;
+    list-style-type: none; }
+    footer ul li {
+      display: inline-block;
+      text-align: center;
+      background: #ffffff;
+      color: #00bdbd;
+      line-height: 42px;
+      margin: 0 6px;
+      width: 42px !important;
+      height: 42px !important;
+      -webkit-border-radius: 50%;
+      border-radius: 50%; }
+      footer ul li a {
+        color: #ffffff;
+        width: 42px !important;
+        height: 42px !important; }
+        footer ul li a i {
+          line-height: 42px !important; }
 
 /*# sourceMappingURL=style.css.map */
