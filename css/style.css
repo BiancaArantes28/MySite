@@ -187,4 +187,31 @@ h5 {
     min-height: 175.59px;
     max-height: 175.59px; }
 
+#contato {
+  background-color: #474d5d;
+  color: #fff; }
+  #contato .container {
+    padding-top: 85px;
+    padding-bottom: 93px; }
+  #contato h4 {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-bottom: 15px; }
+  #contato p {
+    color: #93959c;
+    font-size: 13px;
+    line-height: 19px;
+    padding-bottom: 14px;
+    margin: 0; }
+  #contato form .estiloInput {
+    background-color: #585f73;
+    color: #93959c;
+    padding: 15px 30px;
+    border: none;
+    margin-right: 3%;
+    margin-bottom: 30px;
+    outline: none;
+    font-style: italic;
+    width: 100%; }
+
 /*# sourceMappingURL=style.css.map */

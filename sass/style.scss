@@ -10,6 +10,9 @@ $color_excon_p: #84868d;
 $color_experiencia_p: #84868d;
 $color_subtitle: #474d5d;
 $color_portfolio: #563d7c;
+$color_p_contact: #93959c;
+$color_background_input: #585f73;
+$color_input: #93959c;
 
 
 //// Mixins ////
@@ -251,5 +254,38 @@ h5{
         width: 100%;
         min-height: 175.59px;
         max-height: 175.59px;
+    }
+}
+
+#contato{
+    background-color: $color_excon_font;
+    color: $color_h1;
+    .container{
+        @include padding-container(85px, 93px);
+    }
+    h4{
+        font-weight: 600;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+    }
+    p{
+        color: $color_p_contact;
+        font-size: 13px;
+        line-height: 19px;
+        padding-bottom: 14px;
+        margin:0;
+    }
+    form{
+        .estiloInput{
+            background-color: $color_background_input;
+            color: $color_input;
+            padding: 15px 30px;
+            border: none;
+            margin-right: 3%;
+            margin-bottom: 30px;
+            outline: none;
+            font-style: italic;
+            width: 100%;
+        }
     }
 }
