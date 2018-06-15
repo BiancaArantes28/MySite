@@ -1,3 +1,4 @@
+//// variaveis color ////
 $color_h1: #fff;
 $color_about: #00bdbd;
 $color_secundary: #ff675f;
@@ -13,14 +14,22 @@ $color_portfolio: #563d7c;
 $color_p_contact: #93959c;
 $color_background_input: #585f73;
 $color_input: #93959c;
+$color_menu: #343a40;
+$color_black: #000000;
+
+//// variaveis fontes ////
+$font_family_1: 'Open Sans';
+$font_family_2: sans-serif;
 
 
-//// Mixins ////
+//// Mixin para container ////
 @mixin padding-container($padding_top, $padding_bottom){
     padding-top: $padding_top;
     padding-bottom: $padding_bottom;
 
 }
+
+//// Mixin para button ////
 @mixin build-button($backgroundcolor, $colortext){
     background-color: transparent;
     color: $backgroundcolor;
@@ -33,6 +42,40 @@ $color_input: #93959c;
         border: 1px solid $backgroundcolor !important;
     }
 }
+
+//// Mixin para background e color ////
+@mixin background-color-width($background_color, $color, $width){
+    background-color: $background_color;
+    color: $color;
+    width: $width;
+}
+
+@mixin background-color-border($background_color, $color, $border_color){
+    background-color: $background_color;
+    color: $color;
+    border-color: $border_color;
+}
+
+//// Mixin para fontes ////
+@mixin fonte($size, $line_height, $font_weight){
+    font-family: $font_family_1, $font_family_2;
+    font-size: $size;
+    line-height: $line_height;
+    font-weight: $font_weight;
+}
+
+@mixin font-size-weight($font_weight, $line_height){
+    font-weight: $font_weight;
+    line-height: $line_height;
+}
+
+//// Mixin para dimensoes ////
+@mixin dimensoes($width, $height){
+    width: $width;
+    height: $height;
+}
+
+//// Navbar ////
 .navbar{
     padding: 0px;
     position: fixed;
@@ -57,21 +100,19 @@ $color_input: #93959c;
     padding-bottom: 45px;
 }
 h5{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    line-height: 24px;
+    @include fonte(16px, 24px, 400);
     padding-bottom: 6px;
-    font-weight: 400;
     margin: 0px;
 }
+
+//// Home ////
 #home{
     height: 902px;
     background-image: url("css3-code.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     .homeContent{
-        width: 100%;
-        height: 100%;
+        @include dimensoes(100%, 100%);
         background: rgb(0, 0, 0) transparent;
         background: rgba(0, 0, 0, 0.7);
         .bannerHome{
@@ -90,10 +131,10 @@ h5{
         }
     }
 }
+
+//// Sobre ////
 #sobre{
-    background-color: $color_about;
-    color: $color_h1;
-    width: 100%;
+    @include background-color-width($color_about, $color_h1, 100%);
     .container{
         @include padding-container(85px, 93px);
         .occupationArea{
@@ -102,10 +143,7 @@ h5{
             padding-bottom: 22px;
         }
         p{
-            font-family: 'Open Sans', sans-serif;
-            font-size: 14px;
-            line-height: 21px;
-            font-weight: 400;
+            @include fonte(14px, 21px, 400);
             padding-bottom: 22px;
             margin: 0px;
         }
@@ -116,6 +154,7 @@ h5{
     
 }
 
+//// Experiencia ////
 #experiencia{
     .container{
         @include padding-container(85px, 93px);
@@ -133,17 +172,14 @@ h5{
     }
     .workDetails{
         .workYear{
-            color: $color_h1;
-            background: $color_workyear;
+            @include background-color-width($color_workyear, $color_h1, 120px);
             text-align: center;
-            width: 120px;
             height: 120px;
             padding: 40px 0 40px 0;
             -webkit-border-radius: 50%;
             border-radius: 50%;
             @media screen and (min-width: 1200px){
-                width: 140px;
-                height: 140px;
+                @include dimensoes(140px, 140px);
                 padding-top: 50px;
             }
         }
@@ -152,9 +188,8 @@ h5{
             padding-bottom: 47px;
         }
         .arrowpart{
+            @include dimensoes(15px, 50px);
             float: left;
-            width: 15px;
-            height: 50px;
             background: url(../img/arrow-left.png) no-repeat 0 23px;
         }
         .exCon{
@@ -180,6 +215,7 @@ h5{
     
 }
 
+//// Conhecimento ////
 #conhecimento{
     .container{
         @include padding-container(85px, 93px);
@@ -209,17 +245,15 @@ h5{
         margin-bottom: 23px;
     }
     figcaption{
+        @include fonte(19px, 24px, 600);
         color: $color_subtitle;
         text-align: center;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 19px;
-        line-height: 24px;
         padding-bottom: 40px;
-        font-weight: 600;
         margin: 0px;
     }
 }
 
+//// Portfolio ////
 #portfolio{
     .container{
         @include padding-container(85px, 93px);
@@ -230,23 +264,17 @@ h5{
     .buttons{
         margin-top:30px;
         .portfolioButton{
-            background-color: transparent;
-            color: $color_h1;
-            border-color: $color_h1;
+            @include background-color-border(transparent, $color_h1, $color_h1);
             &:hover{
-                border-color: #000000;
-                color: #000000;
+                border-color: $color_black;
+                color: $color_black;
             }
             
         }
         .selected{
-            background-color: darken($color_about, 20%);
-            color: $color_h1;
-            border-color: darken($color_about, 20%);
+            @include background-color-border(darken($color_about, 20%), $color_h1, darken($color_about, 20%));
             &:hover{
-                background-color: darken($color_about, 20%);
-                color: $color_h1;
-                border-color: darken($color_about, 20%);
+                @include background-color-border(darken($color_about, 20%), $color_h1, darken($color_about, 20%));
             }
         }
     }
@@ -257,6 +285,7 @@ h5{
     }
 }
 
+//// Contato ////
 #contato{
     background-color: $color_excon_font;
     color: $color_h1;
@@ -270,7 +299,7 @@ h5{
     }
     p{
         color: $color_p_contact;
-        font-family: 'Open Sans', sans-serif;
+        font-family: $font_family_1, $font_family_2;
         font-size: 13px;
         line-height: 19px;
         padding-bottom: 14px;
@@ -278,47 +307,45 @@ h5{
     }
     form{
         .estiloInput{
-            background-color: $color_background_input;
-            color: $color_input;
+            @include background-color-width($color_background_input, $color_input, 100%);
             padding: 15px 30px;
             border: none;
             margin-right: 3%;
             margin-bottom: 30px;
             outline: none;
             font-style: italic;
-            width: 100%;
         }
     }
 }
 
+//// Footer ////
 footer{
-    background-color: $color_about;
-    .container{
-        @include padding-container(85px, 93px);
-    }
+    background-color: $color_menu;
+    padding: 25px;
     ul{
         margin: 0 auto;
         text-align: center;
         list-style-type: none;
         li{
+            @include background-color-width($color_h1, $color_menu, 42px !important);
+            @include font-size-weight(bold, 42px);
+            cursor: pointer;
             display: inline-block;
             text-align: center;
-            background: #ffffff;
-            color: #00bdbd;
-            line-height: 42px;
             margin: 0 6px;
-            width: 42px !important;
-            height: 42px !important;
-            -webkit-border-radius: 50%;
             border-radius: 50%;
+            height: 42px !important;
+            &:hover{
+                background-color: darken($color_menu, 10%);
+                color: $color_h1;
+            }
             a{
-                color: #ffffff;
-                width: 42px !important;
-                height: 42px !important;
                 i{
                     line-height: 42px !important;
+                    font-size: 30px;
                 }
             }
         }
+        
     }
 }
