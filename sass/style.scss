@@ -43,6 +43,16 @@ $font_family_2: sans-serif;
     }
 }
 
+@mixin build-button-colors($backgroundcolor, $colortext){
+    background-color: $backgroundcolor;
+    color: $colortext;
+    border: 1px solid $backgroundcolor;
+    &:hover{
+        background-color: darken($backgroundcolor, 15%);
+        color: $colortext;
+    }
+}
+
 //// Mixin para background e color ////
 @mixin background-color-width($background_color, $color, $width){
     background-color: $background_color;
@@ -123,12 +133,34 @@ h5{
             text-align:center;
             padding:30px 0 30px ;
             max-width:960px;
-            border:1px solid $color_h1;
             color: $color_h1;
             h1{
                 text-transform:uppercase;
             }
-        }
+            .button-portfolio{
+                margin-top: 45px;
+                @include build-button-colors($color_secundary, $color_h1);
+            }
+            .button-sobre{
+                margin-top: 45px;
+                @include build-button-colors($color_about, $color_h1);
+            }
+            .messages{
+                margin-top: 200px;
+                font-size: 14px;
+                font-weight: 400;
+                @media screen and (max-width: 768px) {
+                    font-size: 18px;
+                }
+            }
+
+        } 
+    }
+    @media sreen and (min-width: 268px) {
+        height: 1000px;
+        background-image: url("css3-code.jpg");
+        background-repeat: no-repeat;
+        background-size: 200%;
     }
 }
 

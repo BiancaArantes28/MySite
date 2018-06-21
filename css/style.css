@@ -45,10 +45,38 @@ h5 {
       text-align: center;
       padding: 30px 0 30px;
       max-width: 960px;
-      border: 1px solid #fff;
       color: #fff; }
       #home .homeContent .bannerHome h1 {
         text-transform: uppercase; }
+      #home .homeContent .bannerHome .button-portfolio {
+        margin-top: 45px;
+        background-color: #ff675f;
+        color: #fff;
+        border: 1px solid #ff675f; }
+        #home .homeContent .bannerHome .button-portfolio:hover {
+          background-color: #ff1e13;
+          color: #fff; }
+      #home .homeContent .bannerHome .button-sobre {
+        margin-top: 45px;
+        background-color: #00bdbd;
+        color: #fff;
+        border: 1px solid #00bdbd; }
+        #home .homeContent .bannerHome .button-sobre:hover {
+          background-color: #007171;
+          color: #fff; }
+      #home .homeContent .bannerHome .messages {
+        margin-top: 200px;
+        font-size: 14px;
+        font-weight: 400; }
+        @media screen and (max-width: 768px) {
+          #home .homeContent .bannerHome .messages {
+            font-size: 18px; } }
+  @media sreen and (min-width: 268px) {
+    #home {
+      height: 1000px;
+      background-image: url("css3-code.jpg");
+      background-repeat: no-repeat;
+      background-size: 200%; } }
 
 #sobre {
   background-color: #00bdbd;
