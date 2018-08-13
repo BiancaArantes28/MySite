@@ -1,3 +1,9 @@
+html, body {
+  height: 100%; }
+
+.full-height {
+  height: 100%; }
+
 .navbar {
   padding: 0px;
   position: fixed;
@@ -265,8 +271,12 @@ footer {
       footer ul li:hover {
         background-color: #1d2124;
         color: #fff; }
-      footer ul li a i {
-        line-height: 42px !important;
-        font-size: 30px; }
+      footer ul li a {
+        color: #343a40; }
+        footer ul li a:hover {
+          color: #fff; }
+        footer ul li a i {
+          line-height: 42px !important;
+          font-size: 30px; }
 
 /*# sourceMappingURL=style.css.map */
